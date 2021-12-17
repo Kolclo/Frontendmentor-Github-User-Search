@@ -13,9 +13,6 @@ toggle.addEventListener('input', e => {
 });
 
 // Search constants
-const searchbar = document.querySelector(".searchbar")
-const profileContainer = document.querySelector(".profile")
-const root = document.documentElement.style
 const get = (param) => document.getElementById(`${param}`)
 const url = "https://api.github.com/users/"
 const noResults = get("no-results")
@@ -99,8 +96,6 @@ function updateProfile(data) {
         website.innerText = checkNull(data.blog, website)
         twitter.innerText = checkNull(data.twitter_username, twitter)
         company.innerText = checkNull(data.company, company)
-        // searchbar.classList.toggle("active")
-        // profileContainer.classList.toggle("active")
     } else {
         noResults.style.display = "block"
     }
